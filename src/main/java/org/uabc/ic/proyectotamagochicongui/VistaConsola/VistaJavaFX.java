@@ -36,7 +36,7 @@ public class VistaJavaFX {
         root.setPadding(new Insets(20));
         root.setAlignment(Pos.TOP_CENTER);
 
-        // ---- Registro ----
+        // Registro
         TextField txtNombre = new TextField();
         txtNombre.setPromptText("Nombre del nuevo Tamagotchi");
 
@@ -53,18 +53,18 @@ public class VistaJavaFX {
         HBox panelRegistro = new HBox(10, txtNombre, cbTipo, btnCrear);
         panelRegistro.setAlignment(Pos.CENTER);
 
-        // ---- Selector ----
+        //  Selector
         selectorMascota = new ComboBox<>();
-        selectorMascota.getItems().add("Solovino");
-        selectorMascota.setValue("Solovino");
+        //selectorMascota.getItems().add("Solovino");
+        //selectorMascota.setValue("Solovino");
         selectorMascota.setOnAction(e -> seleccionarActual());
 
-        // ---- Estado de animo ----
+        //  Estado de animo
         lblCara = new Label("😄");
         lblCara.setStyle("-fx-font-size: 48px;");
         lblEstado = new Label("Estado de ánimo: Todo bien");
 
-        // ---- Estadisticas ----
+        //  Estadisticas
         pbEnergia = new ProgressBar(1.0);
         pbHambre = new ProgressBar(0.0);
         pbFelicidad = new ProgressBar(1.0);
@@ -79,13 +79,13 @@ public class VistaJavaFX {
         gridStats.addRow(2, new Label("Felicidad:"), pbFelicidad);
         gridStats.addRow(3, new Label("Salud:"), pbSalud);
 
-        // ---- Caracteristicas propias de cada especie ----
+        //  Caracteristicas propias de cada especie
         lblCaracteristicas = new Label();
         lblCaracteristicas.setStyle("-fx-text-alignment: center; -fx-font-style: italic;");
 
-        lblMensaje = new Label("¡Bienvenido a tu Tamagotchi!");
+        lblMensaje = new Label("Interfaz de tamagochis");
 
-        // ---- Menus de comida y juego ----
+        //  Menus de comida y juego
         cbComida = new ComboBox<>();
         cbComida.getItems().addAll(1, 2, 3);
         cbComida.setValue(1);
@@ -103,7 +103,7 @@ public class VistaJavaFX {
         HBox panelMenus = new HBox(40, cajaComida, cajaJuego);
         panelMenus.setAlignment(Pos.CENTER);
 
-        // ---- Botones ----
+        //  Botones
         Button btnComer = new Button("Comer");
         btnComer.setOnAction(e -> {
             if (puedeActuar()) {
@@ -162,7 +162,7 @@ public class VistaJavaFX {
         HBox panelBotones = new HBox(10, btnComer, btnJugar, btnDormir, btnSonido, btnSanar);
         panelBotones.setAlignment(Pos.CENTER);
 
-        // ---- Botones de prueba (puedes quitarlos al terminar) ----
+        //  Botones de prueba
         Button btnMoribundo = new Button("Crear Solovino");
         btnMoribundo.setOnAction(e -> crearSolovino());
 
